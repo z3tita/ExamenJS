@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen JS</title>
+    <link rel="stylesheet" href="index.css">
+    <!--Nuestro script-->
+    <script src="index.js"></script>
+</head>
+
+<body id="cos">
+
+    <header id="header">
+        <div>
+            <img src="https://www.esliceu.com/wp-content/uploads/2021/11/401_.png" alt="logo" title="Logo Es Liceu">
+        </div>
+        <div>
+            <span id="titol">Aplicacions Web - Examen JS - 25/02/2022</span>
+        </div>
+    </header>
+
+    <main>
+        <ol>
+            <li>
+                <p class="enunciat">Calcula el factorial d'un número sencer (n!). <br>
+                    (50 punts)</p>
+                <p class="explicacio">
+                    Es calcula multiplicant aquest núméro per tots els seus números anteriors fins arribar a 1<br>
+                    Per exemple: 5! = 5*4*3*2*1 = 120<br>
+                    Si el número és decimal, agafau només la part sencera. <br>
+                    El factorial de 0 és 1. (0! = 1) <br>
+                    Si el número és negatiu, no ho calculam, mostram una errada i avisam a l'usuari amb un alert. <br>
+                    A "operacions" s'ha de mostrar el càlcul que heu fet per arribar al resultat. (5*4*3*2*1)
+                </p>
+                <p class="exercici">
+                    <input type="number" id="entradaFactorial">
+                    <button onclick="factorial()">Calcula Factorial</button>
+                    <br>
+                    <label>Resultat:
+                        <span id="resultatFactorial"></span>
+                    </label>
+                    <br>
+                    <label>Operacions:
+                        <span id="operacionsFactorial"></span>
+                    </label>
+                </p>
+            </li>
+
+            <li>
+                <p class="enunciat">Calculadora d'IVA <br> (25 punts)</p>
+                <p class="explicacio">
+                    Donat un preu amb IVA, calcular el desglosament en "preu sense IVA" + "IVA". <br>
+                    El percentatge d'IVA és variable i s'agafa d'un desplegable <br>
+                    Redondejau el resultat a 2 decimals. <br>
+                    Exemple: una compra de 100€ al 4% d'IVA és un preu sense IVA de 96,15 i un IVA de 3,85
+                </p>
+                <p class="exercici">
+                    <label for="preuAmbIVA">Preu amb IVA:</label>
+                    <input type="number" id="preuAmbIVA">
+                    <label for="comboIVA">IVA:</label>
+                    <select id="tipusIVA">
+                        <option value="21">General - 21%</option>
+                        <option value="10">Reduït - 10%</option>
+                        <option value="4">Super-reduït - 4%</option>
+                    </select>
+                    <button onclick="calculaIVA()">Calcula IVA</button>
+                    <br>
+                    <label>Preu sense IVA:
+                        <span id="preuSenseIVA"></span>
+                    </label>
+                    <br>
+                    <label>IVA:
+                        <span id="IVA"></span>
+                    </label>
+                </p>
+            </li>
+
+            <li>
+                <p class="enunciat">Estils CSS <br> (25 punts)</p>
+                <p class="explicacio">
+                    Canviar el color del fons de la pàgina per un gris aleatori. <br>
+                    Si el gris és massa oscur, canviar també la font pel color contrari (negatiu) <br>
+                    En cas contrari, la font pot ser "black" <br>
+                    Recordau que els colors grisos són aquells que ténen tots els seus components iguals. <br>
+                    El botó "clear" torna deixar la pàgina amb fons blanc i lletres negres.
+                </p>
+                <p class="exercici">
+                    <button onclick="canviaFons('random')">Fons aleatori</button>
+                    <button onclick="canviaFons('clear')">Clear</button>
+                </p>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        &copy; Daniel Martínez
+    </footer>
+
+</body>
+
+</html>
